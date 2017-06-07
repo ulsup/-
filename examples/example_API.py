@@ -12,6 +12,7 @@ example_1()
 def example_2():
     search_2 = data.Search()
     response_2 = search_2.person(query='Emma Roberts')
-    print(response_2)
+    for i in search_2.results:
+        print(i['popularity'], i['id'], i['name'], i['known_for'])
 
 example_2()
